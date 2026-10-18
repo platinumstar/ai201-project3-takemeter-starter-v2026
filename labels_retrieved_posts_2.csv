@@ -1,72 +1,72 @@
-﻿text,label,note
-"Pothos! They are great for beginners... they don’t need a ton of light, so they’re good indoors.",beginner_recommendation, easy pick for beginners (pothos)
-snake plant is a solid pick! super forgiving and they look awesome.,beginner_recommendation, easy pick for beginners (snake plant)
-Spider plants. You get 'babies' and can grow more. Hearty and forgiving.,beginner_recommendation, easy pick for beginners (spider plant)
-ZZ plant is also easy.,beginner_recommendation, easy pick for beginners (ZZ plant)
-"Tradescantia tolerates low light, is very forgiving, props like a champ...",beginner_recommendation, forgiving pick (tradescantia); mentions propagation only in passing
-"If you want colorful foliage, look into aglaonemas... For a first shelf: pothos, snake plant, spider plant and a peperomia.",beginner_recommendation, first-shelf plant list
-Light is more important than you think. You should be able to read small print without turning a light on.,light_placement, about how much light plants need
-A lot new plant parents think houseplants need water daily and then they die because they essentially drown lol.,watering, overwatering
-Be sure to repot these in a chunky soil mix!!,soil_repotting, potting mix
-"If you have pets, make sure what you're getting isn't toxic :)",pet_safety, toxicity check
-I'd recommend limiting yourself to two plants of a given genus at first... This will help you have a more varied collection...,beginner_recommendation, advice on what to buy first as a new owner
-"Watering on a schedule rather than checking the soil, and not knowing that different plants have different watering requirements ",watering, watering schedule vs checking soil
-A lot of the typical not enough light/too much water set ups we see asking for help on here were me for my first year or two. I didn't realize how little light I had,light_placement, main point is underestimating low light (water mentioned secondarily)
-Immediately repot everything into huge pots when I bought them. So many things died that way,soil_repotting, oversized pots
-Observation mostly. And not overthinking it. The plants will tell you what you need to know if you understand the signs,general_care," general observation habit, no single specific topic"
-"I used to put big ol rocks in the bottom of my pots... My plants got so happy when I took the rocks out and used a mixture of chunky dirt, a little sand, perlite, and old garden compost.",soil_repotting, drainage layer and potting mix
-I used to think quarantining new plants wasn’t all that important... and helllooo thrips. Goodbyyyye lots of plants.,pest_management," skipped quarantine, thrips"
+text,label,note
+"Pothos! They are great for beginners... they don’t need a ton of light, so they’re good indoors.",plant_selection,easy pick for beginners (pothos)
+snake plant is a solid pick! super forgiving and they look awesome.,plant_selection,easy pick for beginners (snake plant)
+Spider plants. You get 'babies' and can grow more. Hearty and forgiving.,plant_selection,easy pick for beginners (spider plant)
+ZZ plant is also easy.,plant_selection,easy pick for beginners (ZZ plant)
+"Tradescantia tolerates low light, is very forgiving, props like a champ...",plant_selection,forgiving pick (tradescantia); mentions propagation only in passing
+"If you want colorful foliage, look into aglaonemas... For a first shelf: pothos, snake plant, spider plant and a peperomia.",plant_selection,first-shelf plant list
+Light is more important than you think. You should be able to read small print without turning a light on.,general_care,about how much light plants need
+A lot new plant parents think houseplants need water daily and then they die because they essentially drown lol.,watering_soil,overwatering
+Be sure to repot these in a chunky soil mix!!,watering_soil,potting mix
+"If you have pets, make sure what you're getting isn't toxic :)",plant_selection,toxicity check
+I'd recommend limiting yourself to two plants of a given genus at first... This will help you have a more varied collection...,plant_selection,advice on what to buy first as a new owner
+"Watering on a schedule rather than checking the soil, and not knowing that different plants have different watering requirements ",watering_soil,watering schedule vs checking soil
+A lot of the typical not enough light/too much water set ups we see asking for help on here were me for my first year or two. I didn't realize how little light I had,general_care,main point is underestimating low light (water mentioned secondarily)
+Immediately repot everything into huge pots when I bought them. So many things died that way,watering_soil,oversized pots
+Observation mostly. And not overthinking it. The plants will tell you what you need to know if you understand the signs,general_care,"general observation habit, no single specific topic"
+"I used to put big ol rocks in the bottom of my pots... My plants got so happy when I took the rocks out and used a mixture of chunky dirt, a little sand, perlite, and old garden compost.",watering_soil,drainage layer and potting mix
+I used to think quarantining new plants wasn’t all that important... and helllooo thrips. Goodbyyyye lots of plants.,pest_management,"skipped quarantine, thrips"
 "Oh god yes. Many times, many plants. It’s a bit of a catch 22 because I enjoy looking after them and I think it does help me stay healthier, but they’re the first thing to go when I go downhill.",general_care,relabeled from care_challenges (not in taxonomy); retrieved comment excerpt about neglecting plants during hard times; no specific label fits better
 I have chronic depression... the only plant I’ve been,general_care,relabeled from care_challenges (not in taxonomy); excerpt is cut off in the source so label is tentative; full text not available
-tolerate a bit of under watering or over watering. Keep in moderately lit area and water once,watering,excerpt is cut off in the source so full text is not available; clearly about watering
-Plants recover more easily from drought than drowning,watering, underwatering vs overwatering
-I water by pot weight... After a while you get to know when certain plants need watering.,watering, checking pot weight
-Research your growing conditions... use a light meter app to see usable light.,light_placement, measuring usable light
-Group plants together by likeness so I'm not scattered,general_care, grouping plants for routine care
-"start with Aloe Vera, and just forget about it for a few weeks before watering each time. Start small and",beginner_recommendation,excerpt is cut off in the source so full text is not available; recommends aloe as a starter plant
-Plant jail (the bathroom) for a few weeks until I can be certain there are no health hazards,pest_management, quarantining new plants
-"I take it home and immediately repot in new, fresh soil/medium of my own.",soil_repotting, repotting new plants into fresh mix
-Beneficial nematodes... that combined with the yellow sticky traps seems to have handled it.,pest_management, nematodes and sticky traps
-I do a walkthrough weekly to check which ones need water.,general_care, weekly inspection walkthrough (inspections fall under general_care)
+tolerate a bit of under watering or over watering. Keep in moderately lit area and water once,watering_soil,excerpt is cut off in the source so full text is not available; clearly about watering
+Plants recover more easily from drought than drowning,watering_soil,underwatering vs overwatering
+I water by pot weight... After a while you get to know when certain plants need watering.,watering_soil,checking pot weight
+Research your growing conditions... use a light meter app to see usable light.,general_care,measuring usable light
+Group plants together by likeness so I'm not scattered,general_care,grouping plants for routine care
+"start with Aloe Vera, and just forget about it for a few weeks before watering each time. Start small and",plant_selection,excerpt is cut off in the source so full text is not available; recommends aloe as a starter plant
+Plant jail (the bathroom) for a few weeks until I can be certain there are no health hazards,pest_management,quarantining new plants
+"I take it home and immediately repot in new, fresh soil/medium of my own.",watering_soil,repotting new plants into fresh mix
+Beneficial nematodes... that combined with the yellow sticky traps seems to have handled it.,pest_management,nematodes and sticky traps
+I do a walkthrough weekly to check which ones need water.,general_care,weekly inspection walkthrough (inspections fall under general_care)
 Most of them have slow release fertilizer so I don’t have to worry about that.,general_care,relabeled from fertilizing (not in taxonomy); light fertilizing is defined under general_care
-"I repot a few here and there until they're repotted... take it slow, just a few plants at a time.",soil_repotting, repotting in batches
-My pothos got really leggy so I cut a few vines just below a node and put them in a jar of water on the kitchen counter. Roots showed up in about two weeks. When the roots are 2 inches long I'll move them into soil. Any tips for making the transfer easier?,propagation,"synthetic; node cuttings in water, transfer to soil"
-"Spider plant finally sent out a bunch of babies. Can I pot them up while they are still attached to the mother, or should I snip them off first and root them in water?",propagation,synthetic; spider plant pups
-Tried leaf cuttings of my snake plant and after three months there is nothing happening. Do I need to divide the plant instead? What actually works for you?,propagation,synthetic; cuttings vs division
-"Divided my overgrown peace lily today into three clumps. Each has healthy roots and a few leaves. Sharing how I did it: tease the root ball apart, cut only where needed, pot each division in fresh mix.",propagation,synthetic; division; repotting is only the last step
-Water propagation update: my monstera cutting has one node under water and the roots are about an inch long. Should I wait for more roots before putting it in soil?,propagation,"synthetic; water roots, timing of move to soil"
-"Just adopted a kitten. Which of my plants are toxic to cats? I have a pothos, a peace lily, a snake plant and a spider plant.",pet_safety,synthetic; toxicity question for cats
-"Looking for pet-safe plants for a dog household. Calathea and parlor palm seem to be on the safe lists, are there other good ones?",pet_safety,synthetic; pet-safe choices
-My cat keeps chewing on my philodendron. I moved it to a high hanging shelf. Is there anything else I can do to keep her away from the plants?,pet_safety,synthetic; placement away from cat
-"PSA: lilies are extremely dangerous for cats, even the pollen. Please check before bringing a bouquet or plant home if you have cats.",pet_safety,synthetic; toxicity warning
-Is my dog going to be ok? He ate a small piece of a ZZ plant leaf an hour ago. He seems normal so far but I am worried.,pet_safety,synthetic; possible ingestion of toxic plant
+"I repot a few here and there until they're repotted... take it slow, just a few plants at a time.",watering_soil,repotting in batches
+My pothos got really leggy so I cut a few vines just below a node and put them in a jar of water on the kitchen counter. Roots showed up in about two weeks. When the roots are 2 inches long I'll move them into soil. Any tips for making the transfer easier?,general_care,"synthetic; node cuttings in water, transfer to soil"
+"Spider plant finally sent out a bunch of babies. Can I pot them up while they are still attached to the mother, or should I snip them off first and root them in water?",general_care,synthetic; spider plant pups
+Tried leaf cuttings of my snake plant and after three months there is nothing happening. Do I need to divide the plant instead? What actually works for you?,general_care,synthetic; cuttings vs division
+"Divided my overgrown peace lily today into three clumps. Each has healthy roots and a few leaves. Sharing how I did it: tease the root ball apart, cut only where needed, pot each division in fresh mix.",general_care,synthetic; division; repotting is only the last step
+Water propagation update: my monstera cutting has one node under water and the roots are about an inch long. Should I wait for more roots before putting it in soil?,general_care,"synthetic; water roots, timing of move to soil"
+"Just adopted a kitten. Which of my plants are toxic to cats? I have a pothos, a peace lily, a snake plant and a spider plant.",plant_selection,synthetic; toxicity question for cats
+"Looking for pet-safe plants for a dog household. Calathea and parlor palm seem to be on the safe lists, are there other good ones?",plant_selection,synthetic; pet-safe choices
+My cat keeps chewing on my philodendron. I moved it to a high hanging shelf. Is there anything else I can do to keep her away from the plants?,plant_selection,synthetic; placement away from cat
+"PSA: lilies are extremely dangerous for cats, even the pollen. Please check before bringing a bouquet or plant home if you have cats.",plant_selection,synthetic; toxicity warning
+Is my dog going to be ok? He ate a small piece of a ZZ plant leaf an hour ago. He seems normal so far but I am worried.,plant_selection,synthetic; possible ingestion of toxic plant
 "Tiny black flies keep coming out of the soil of my fern. I think they are fungus gnats. I've let the top two inches dry out, should I also try sticky traps?",pest_management,"synthetic; fungus gnats, treatment"
 "Found fine webbing on the underside of my calathea leaves, and the leaves look speckled. Spider mites? What do I spray and how often?",pest_management,synthetic; spider mite identification and treatment
 White cottony spots on the stems of my jade plant. I dabbed them with rubbing alcohol on a cotton swab. Is that enough for mealybugs or should I use neem as well?,pest_management,synthetic; mealybugs
 "New plant routine that saved me: every new plant goes in a separate room for 3 weeks, I check leaf undersides each few days, and only then does it join the others.",pest_management,synthetic; quarantine routine
 Thrips are all over my collection and I can't seem to get rid of them. Systemic or spray? I'm tired of losing leaves.,pest_management,synthetic; thrips
-My fiddle leaf fig is leaning hard toward the window and the new growth is tiny. Should I rotate it every week or move it closer to the glass?,light_placement,synthetic; rotating and distance from window
-I only have a north-facing window. Would a cheap grow light be enough for a pothos and a snake plant?,light_placement,"synthetic; north window, grow light"
-Moved my string of pearls to a west window and the leaves got crispy brown patches within a week. Sun scorch? Should I use a sheer curtain?,light_placement,synthetic; sun scorch
-My succulents are stretching and getting leggy even though they are by a window. How many hours of direct sun do they need?,light_placement,synthetic; legginess
-"Where in the living room is the best spot for a monstera? Window faces east, the sofa is about 6 feet away.",light_placement,synthetic; distance from window
-My pothos leaves are yellow and the soil is always damp. I water every Sunday. Am I overwatering? How do I tell when it is time to water?,watering,synthetic; overwatering symptoms and timing
-I keep forgetting to water my ferns and the tips go crispy. Is a moisture meter worth buying?,watering,"synthetic; underwatering, moisture meter"
-"Do you water from the top or bottom? I tried bottom watering my calathea and the water drained out slowly, so I'm not sure it was right.",watering,synthetic; method of watering and drainage
-"The pot feels very light and the soil has pulled away from the edges. When I water, the water runs straight out the bottom. What's happening?",watering,"synthetic; dry soil, water running through"
-How long do you wait between waterings for a ZZ plant in a medium-light room?,watering,synthetic; watering timing
-The roots of my rubber plant are coming out of the drainage holes. Time to repot? What size pot should I go up to?,soil_repotting,"synthetic; pot size, rootbound"
-Pulled my peperomia from its pot and the roots were brown and mushy. I cut off the rotten ones. What soil should I use to repot it?,soil_repotting,"synthetic; root rot cleanup, mix"
-My planter has no drainage hole. Can I drill one in a ceramic pot or should I just use a nursery pot inside?,soil_repotting,synthetic; drainage holes
-Is regular potting soil fine for succulents or do I really need to add perlite and sand?,soil_repotting,synthetic; potting mix
-"The soil in my old philodendron pot has turned hard and compacted. Repot into fresh mix now in fall, or wait until spring?",soil_repotting,"synthetic; compacted soil, repotting timing"
+My fiddle leaf fig is leaning hard toward the window and the new growth is tiny. Should I rotate it every week or move it closer to the glass?,general_care,synthetic; rotating and distance from window
+I only have a north-facing window. Would a cheap grow light be enough for a pothos and a snake plant?,general_care,"synthetic; north window, grow light"
+Moved my string of pearls to a west window and the leaves got crispy brown patches within a week. Sun scorch? Should I use a sheer curtain?,general_care,synthetic; sun scorch
+My succulents are stretching and getting leggy even though they are by a window. How many hours of direct sun do they need?,general_care,synthetic; legginess
+"Where in the living room is the best spot for a monstera? Window faces east, the sofa is about 6 feet away.",general_care,synthetic; distance from window
+My pothos leaves are yellow and the soil is always damp. I water every Sunday. Am I overwatering? How do I tell when it is time to water?,watering_soil,synthetic; overwatering symptoms and timing
+I keep forgetting to water my ferns and the tips go crispy. Is a moisture meter worth buying?,watering_soil,"synthetic; underwatering, moisture meter"
+"Do you water from the top or bottom? I tried bottom watering my calathea and the water drained out slowly, so I'm not sure it was right.",watering_soil,synthetic; method of watering and drainage
+"The pot feels very light and the soil has pulled away from the edges. When I water, the water runs straight out the bottom. What's happening?",watering_soil,"synthetic; dry soil, water running through"
+How long do you wait between waterings for a ZZ plant in a medium-light room?,watering_soil,synthetic; watering timing
+The roots of my rubber plant are coming out of the drainage holes. Time to repot? What size pot should I go up to?,watering_soil,"synthetic; pot size, rootbound"
+Pulled my peperomia from its pot and the roots were brown and mushy. I cut off the rotten ones. What soil should I use to repot it?,watering_soil,"synthetic; root rot cleanup, mix"
+My planter has no drainage hole. Can I drill one in a ceramic pot or should I just use a nursery pot inside?,watering_soil,synthetic; drainage holes
+Is regular potting soil fine for succulents or do I really need to add perlite and sand?,watering_soil,synthetic; potting mix
+"The soil in my old philodendron pot has turned hard and compacted. Repot into fresh mix now in fall, or wait until spring?",watering_soil,"synthetic; compacted soil, repotting timing"
 Wiped dust off all my leaves today with a damp cloth. I do this once a month. Anyone else do a monthly cleaning day?,general_care,synthetic; cleaning leaves
 How do you change your plant care in winter? I cut back on fertilizer and water a bit less. Anything else I should adjust?,general_care,synthetic; seasonal care
 I fertilize with half-strength liquid feed once a month in spring and summer and stop in winter. Does that sound right for most foliage plants?,general_care,synthetic; light fertilizing
 "Sunday checklist: rotate pots a quarter turn, pick off dead leaves, check for anything odd. It takes twenty minutes and keeps everything in good shape.",general_care,synthetic; routine maintenance
-I've killed every plant I ever owned. What is the easiest houseplant for a complete beginner with average light?,beginner_recommendation,synthetic; asking for easy plant
-"Starting my first plant shelf. I'm thinking pothos, ZZ and a snake plant. Are those forgiving enough, or should I add something else?",beginner_recommendation,synthetic; first plants
-Gift for a friend who has never had a plant. Something nearly impossible to kill and not fussy?,beginner_recommendation,synthetic; easy gift plant
-Best low-maintenance plants for a dorm room with one small window? I travel a lot and forget about them.,beginner_recommendation,synthetic; low-maintenance for new owner
+I've killed every plant I ever owned. What is the easiest houseplant for a complete beginner with average light?,plant_selection,synthetic; asking for easy plant
+"Starting my first plant shelf. I'm thinking pothos, ZZ and a snake plant. Are those forgiving enough, or should I add something else?",plant_selection,synthetic; first plants
+Gift for a friend who has never had a plant. Something nearly impossible to kill and not fussy?,plant_selection,synthetic; easy gift plant
+Best low-maintenance plants for a dorm room with one small window? I travel a lot and forget about them.,plant_selection,synthetic; low-maintenance for new owner
 Bought a pothos that came with gnats. I've repotted it into fresh mix and it's now in the bathroom away from the others. Main question: what's the best way to kill the gnat larvae?,pest_management,"synthetic; multi-topic; main question is treating gnats, repotting is incidental"
-"I repotted my monstera into a pot with no drainage and now the soil stays wet and leaves droop. Should I water less, or is the pot the problem?",soil_repotting,"synthetic; multi-topic; emphasis on pot without drainage, watering is a symptom"
+"I repotted my monstera into a pot with no drainage and now the soil stays wet and leaves droop. Should I water less, or is the pot the problem?",watering_soil,"synthetic; multi-topic; emphasis on pot without drainage, watering is a symptom"

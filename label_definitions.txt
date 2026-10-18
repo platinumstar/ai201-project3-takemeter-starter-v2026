@@ -3,11 +3,7 @@
 # Copied from the README Label Taxonomy so the baseline is judged on exactly
 # the definitions written there. baseline.py reads this file.
 
-beginner_recommendation: suggests which plants (or how many) a new owner should start with
-soil_repotting: about potting mix, pot size, drainage, or when and how to repot
-watering: about how much, how often, or by what method to water, including over- and underwatering
-general_care: routine upkeep that isn't one specific topic: inspections, cleaning, fertilizing, seasonal adjustments, and the general habit or mindset of looking after plants
+plant_selection: recommends which plants to get, for a new owner or for a home with pets
+watering_soil: about how much, how often, or by what method to water, or about potting mix, pot size, drainage and repotting
 pest_management: about spotting, preventing or treating pests, including quarantining new plants
-light_placement: about how much light a plant gets and where to put it
-pet_safety: about whether plants are toxic or safe around cats, dogs and other pets
-propagation: about making new plants from an existing one: cuttings, water rooting, division, offsets
+general_care: all other upkeep: light and placement, propagation, fertilizing, cleaning, inspections, seasonal changes, and the habit or mindset of caring for plants

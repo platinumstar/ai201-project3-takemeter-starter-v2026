@@ -39,51 +39,31 @@
 
 ## What This Does
 
-My community is houseplant owners: the advice threads and questions where people trade tips on keeping plants alive. My classifier reads a single post or comment and sorts it by the care topic it is mainly about. There are eight topics: `beginner_recommendation`, `soil_repotting`, `watering`, `general_care`, `pest_management`, `light_placement`, `pet_safety` and `propagation`. The point is to route a question to the people and answers that fit it, such as sending "why are my leaves yellow and the soil damp" to watering advice rather than to a general pile.
+My community is houseplant owners: the advice threads and questions where people trade tips on keeping plants alive. My classifier reads a single post or comment and sorts it by the care topic it is mainly about. There are four topics: `plant_selection`, `watering_soil`, `pest_management` and `general_care`. The point is to route a question to the people and answers that fit it, such as sending "why are my leaves yellow and the soil damp" to watering advice rather than to a general pile.
 
 ---
 
 ## Label Taxonomy
 
-### `beginner_recommendation`
+### `plant_selection`
 
-**Definition:** Suggests which plants (or how many) a new owner should start with.
+**Definition:** Recommends which plants to get, for a new owner or for a home with pets.
 
 **Example 1:**
 > Pothos! They are great for beginners... they don't need a ton of light, so they're good indoors.
 
 **Example 2:**
-> If you want colorful foliage, look into aglaonemas... For a first shelf: pothos, snake plant, spider plant and a peperomia.
+> If you have pets, make sure what you're getting isn't toxic :)
 
-### `soil_repotting`
+### `watering_soil`
 
-**Definition:** About potting mix, pot size, drainage, or when and how to repot.
-
-**Example 1:**
-> Immediately repot everything into huge pots when I bought them. So many things died that way
-
-**Example 2:**
-> I take it home and immediately repot in new, fresh soil/medium of my own.
-
-### `watering`
-
-**Definition:** About how much, how often, or by what method to water, including over- and underwatering.
+**Definition:** About how much, how often or by what method to water, or about potting mix, pot size, drainage and repotting.
 
 **Example 1:**
 > Watering on a schedule rather than checking the soil, and not knowing that different plants have different watering requirements
 
 **Example 2:**
-> I water by pot weight... After a while you get to know when certain plants need watering.
-
-### `general_care`
-
-**Definition:** Routine upkeep that isn't one specific topic: inspections, cleaning, fertilizing, seasonal adjustments, and the general habit or mindset of looking after plants.
-
-**Example 1:**
-> I do a walkthrough weekly to check which ones need water.
-
-**Example 2:**
-> Most of them have slow release fertilizer so I don't have to worry about that.
+> Immediately repot everything into huge pots when I bought them. So many things died that way
 
 ### `pest_management`
 
@@ -95,73 +75,53 @@ My community is houseplant owners: the advice threads and questions where people
 **Example 2:**
 > Beneficial nematodes... that combined with the yellow sticky traps seems to have handled it.
 
-### `light_placement`
+### `general_care`
 
-**Definition:** About how much light a plant gets and where to put it.
+**Definition:** All other upkeep: light and placement, propagation, fertilizing, cleaning, inspections, seasonal changes, and the habit or mindset of caring for plants.
 
 **Example 1:**
 > Light is more important than you think. You should be able to read small print without turning a light on.
 
 **Example 2:**
-> Research your growing conditions... use a light meter app to see usable light.
-
-### `pet_safety`
-
-**Definition:** About whether plants are toxic or safe around cats, dogs and other pets.
-
-**Example 1:**
-> If you have pets, make sure what you're getting isn't toxic :)
-
-**Example 2:**
-> Just adopted a kitten. Which of my plants are toxic to cats? I have a pothos, a peace lily, a snake plant and a spider plant.
-
-### `propagation`
-
-**Definition:** About making new plants from an existing one: cuttings, water rooting, division, offsets.
-
-**Example 1:**
-> My pothos got really leggy so I cut a few vines just below a node and put them in a jar of water on the kitchen counter. Roots showed up in about two weeks...
-
-**Example 2:**
-> Spider plant finally sent out a bunch of babies. Can I pot them up while they are still attached to the mother, or should I snip them off first and root them in water?
+> Most of them have slow release fertilizer so I don't have to worry about that.
 
 ### The hardest boundary
 
-**Which two labels:** `watering` and `soil_repotting`. Overwatered plants and bad pots show up together: a plant stays wet and droops because it was watered too often, or because the pot has no drainage.
+**Which two labels:** `watering_soil` and `general_care`. Water shows up inside almost every routine and every light or placement problem, so it is easy to pull a post toward `watering_soil`.
 
-**The decision rule I used every time:** Label by the cause the post blames or the fix it asks about. If it's about the pot, soil, drainage or repotting, it's `soil_repotting`, even if watering is mentioned as a symptom. If it's about when, how often or how much to water, it's `watering`. If the post names neither as the cause, I go with whichever topic it spends most words on.
+**The borderline post:**
+> A lot of the typical not enough light/too much water set ups we see asking for help on here were me for my first year or two. I didn't realize how little light I had
 
+**The decision rule I used every time:** If the post is about how, when or how much to water, or about the pot, soil, drainage or repotting, it's `watering_soil`. If water is only one thing mentioned in a routine, or only a symptom of something else such as low light, it's `general_care`. The borderline post above is `general_care`, because its point is that the author underestimated their light.
+
+**A second rule, for `pest_management` and `watering_soil`:** If the post is about a pest, spotting it, treating it or keeping it from spreading, it's `pest_management`, even when the pest is in the soil or the fix involves repotting. If a pest is only a passing sign and the question asked is about watering or the pot, it's `watering_soil`.
 
 ---
 
 ## The Dataset
 
-**Where the posts came from:** TODO: name the source (which forum or thread, and when). The retrieved posts are short comments and excerpts from houseplant advice threads. Some are cut off in the source, and their notes say so. 40 of the 71 rows so far are synthetic examples generated by an AI model and labelled by me; the other 31 are retrieved posts. Synthetic rows are marked `synthetic` in the `note` column.
+**Where the posts came from:** TODO: name the source (which forum or thread, and when). The retrieved posts are short comments and excerpts from houseplant advice threads. Some are cut off in the source, and their notes say so. 40 of the 177 rows are synthetic examples generated by an AI model and labelled by me; the other 137 are retrieved posts. Synthetic rows are marked `synthetic` in the `note` column.
 
-**How I labelled them:** TODO: say how many of the 20 I labelled cold, unaided, and mark them `cold` in the CSV. The retrieved posts were labelled by me, reading each one. Several retrieved posts first had labels that aren't in my taxonomy (`care_challenges`, `fertilizing`). I relabelled them into `general_care`, and the note on each row says so.
+**How I labelled them:** TODO: say how many of the 20 I labelled cold, unaided, and mark them `cold` in the CSV. I read each one and kept only posts that clearly fit the label, so the keyword labels were checked, not accepted as they were. I relabelled sevral posts into `general_care`, and the note on each row says so.
 
-**Counts per label** (71 rows so far; target is 150 minimum):
+**Counts per label** (177 rows):
 
 | Label | Count | Share |
 |---|---|---|
-| `beginner_recommendation` | 12 | 17% |
-| `soil_repotting` | 11 | 15% |
-| `watering` | 10 | 14% |
-| `general_care` | 10 | 14% |
-| `pest_management` | 9 | 13% |
-| `light_placement` | 8 | 11% |
-| `pet_safety` | 6 | 8% |
-| `propagation` | 5 | 7% |
-| **Total** | 71 | 100% |
+| `general_care` | 48 | 27% |
+| `watering_soil` | 47 | 27% |
+| `plant_selection` | 42 | 24% |
+| `pest_management` | 40 | 23% |
+| **Total** | 177 | 100% |
 
 **Three hard cases**
 
 **1.**
 > *The post:* "A lot of the typical not enough light/too much water set ups we see asking for help on here were me for my first year or two. I didn't realize how little light I had"
 >
-> *Could have been:* `watering` or `light_placement`
+> *Could have been:* `watering_soil` or `general_care`
 >
-> *I chose, because:* `light_placement`. Watering is only mentioned as part of a familiar problem. The author's point is that they underestimated their light.
+> *I chose, because:* `general_care`. Watering is only mentioned as part of a familiar problem. The author's point is that they underestimated their light.
 
 **2.**
 > *The post:* "Plant jail (the bathroom) for a few weeks until I can be certain there are no health hazards"
@@ -173,9 +133,9 @@ My community is houseplant owners: the advice threads and questions where people
 **3.**
 > *The post:* "Tradescantia tolerates low light, is very forgiving, props like a champ..."
 >
-> *Could have been:* `beginner_recommendation` or `propagation`
+> *Could have been:* `plant_selection` or `general_care`
 >
-> *I chose, because:* `beginner_recommendation`. It's recommending an easy plant, and propagation gets one passing mention.
+> *I chose, because:* `plant_selection`. It's recommending an easy plant, and propagation gets one passing mention.
 
 ---|---|---|
 |  |  |  |
@@ -250,7 +210,7 @@ of next unit's variance. -->
 - *What came back:*
 - *What I changed:*
 
-**Pre-labelling disclosure:** 40 rows in `labels.csv` are synthetic examples generated by an AI model and labelled by me. They are marked `synthetic` in the `note` column. The other rows are retrieved posts that I labelled myself.
+**Pre-labelling disclosure:** 40 rows in `labels.csv` are synthetic examples generated by an AI model and labelled by me. They are marked `synthetic` in the `note` column. 106 further rows were pre-labelled by keyword matching and then read and checked by me; they are marked `keyword pre-labelled, reviewed`. The other 31 retrieved posts I labelled myself.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
