@@ -148,17 +148,18 @@ My community is houseplant owners: the advice threads and questions where people
 
 ## The Training Run
 
-<!-- Your starting model, your settings, and anything you changed and why. -->
+- Trained on Apple Silicon GPU (mps), torch 2.14.1, seed 42, default settings.
+- Test split is 30 posts. plant_selection and watering_soil have only 7 test examples each, so their metrics will move a lot between seeds.
+- First run barely learned (accuracy 0.27, macro F1 0.11), probably because 139 posts gave only 27 training steps.
 
-**Base model:**
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Base model:** distilbert-base-uncased
 
-**Anything I changed from the defaults, and why:**
+**Settings:** 3 epochs, learning rate 2e-5, batch size 16, 128 tokens, seed 42
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+**Anything I changed from the defaults, and why:** Nothing.
+
+**Split sizes:** train 139 / val 31 / test 30. The test split has 7 plant_selection, 8 general_care, 7 watering_soil, and 8 pest_management. The two 7s are under the "about 8" line.
 
 
 
