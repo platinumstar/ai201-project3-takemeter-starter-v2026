@@ -57,7 +57,7 @@ Overall accuracy is at least 0.70 on the held-out test posts, in all three seeds
 
 **Why this target:**
 
-With four labels, random guessing would be about 25% accurate, and always predicting my largest label (general_care) would be about 27% accurate. I chose 0.70 because it is well above both baselines and would be high enough for me to trust the classifier to route most posts without manually reviewing every prediction. I did not choose a higher target because some posts contain overlapping topics, especially between general_care and watering_soil, which creates label boundaries that are not always clear even for a human annotator.
+With four labels, random guessing would be about 25% accurate, and always predicting my largest label (pest_management, 55 of 200 posts) would be about 27.5% accurate. I chose 0.70 because it is well above both baselines and would be high enough for me to trust the classifier to route most posts without manually reviewing every prediction. I did not choose a higher target because some posts contain overlapping topics, especially between general_care and watering_soil, which creates label boundaries that are not always clear even for a human annotator.
 
 ---
 
@@ -67,7 +67,7 @@ Every label has an F1 score of at least 0.55 on the held-out test posts, in all 
 
 **Why this target:**
 
-With four labels, random guessing would perform at about 25%. I chose 0.55 because it is more than double that baseline while still being realistic for the smallest class, pest_management, which contains only 40 posts. A lower target would not show that the model learned each label, while a much higher target may be unrealistic because some posts sit on unclear boundaries between general_care and watering_soil.
+With four labels, random guessing would perform at about 25%. I chose 0.55 because it is more than double that baseline while still being realistic for the smallest class, plant_selection, which has 45 of my 200 posts and only 7 in the test split. A lower target would not show that the model learned each label, while a much higher target may be unrealistic because some posts sit on unclear boundaries between general_care and watering_soil.
 
 ---
 
@@ -77,17 +77,17 @@ No label represents more than 28% of the complete dataset.
 
 **Why this target:**
 
-My labels currently range from about 23% to 27% of the dataset. Keeping every label below 28% prevents one category from dominating the data while still allowing some growth in individual labels as I add more examples.
+My labels currently range from 22.5% (plant_selection) to 27.5% (pest_management) of the dataset. Keeping every label below 28% prevents one category from dominating the data while still allowing some growth in individual labels as I add more examples.
 
 ---
 
 ## 4.
 
-The difference between the highest and lowest seed accuracy is no more than 0.10.
+Across seeds 42, 7 and 2024, the difference between the highest and lowest accuracy on the held-out test posts is no more than 0.10.
 
 **Why this target:**
 
-The same model is trained three times with different random seeds. I expect some variation because the held-out test set contains only about 27 posts, but a gap larger than 0.10 would suggest that performance depends too heavily on the seed rather than on patterns learned from the labels.
+The same model is trained three times with different random seeds. I expect some variation because the held-out test set contains only 30 posts, but a gap larger than 0.10 would suggest that performance depends too heavily on the seed rather than on patterns learned from the labels.
 
 ---
 
@@ -97,7 +97,7 @@ The accuracy of the most-confident third of predictions is at least 0.10 higher 
 
 **Why this target:**
 
-The notebook reports accuracy separately for the most-confident and least-confident thirds of predictions. With about 27 held-out test posts, each third contains about 9 posts, so a difference of 0.10 corresponds to roughly one additional correct prediction. I chose this target because a useful confidence score should make the most-confident predictions more accurate than the least-confident predictions. I also allow a tie when both groups achieve an accuracy of 1.00, because confidence should not be penalized when all predictions are correct.
+The notebook reports accuracy separately for the most-confident and least-confident thirds of predictions. With 30 held-out test posts, each third contains 10 posts, so a difference of 0.10 corresponds to exactly one additional correct prediction. I chose this target because a useful confidence score should make the most-confident predictions more accurate than the least-confident predictions. I also allow a tie when both groups achieve an accuracy of 1.00, because confidence should not be penalized when all predictions are correct.
 
 ---
 
