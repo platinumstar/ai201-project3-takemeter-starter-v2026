@@ -202,18 +202,20 @@ My community is houseplant owners: the advice threads and questions where people
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.533 | 0.267 | -0.267 |
+| Macro F1 | 0.470 | 0.105 | -0.364 |
+| F1 — `general_care` | 0.000 | 0.000 | +0.000 |
+| F1 — `pest_management` | 0.857 | 0.421 | -0.436 |
+| F1 — `plant_selection` | 0.560 | 0.000 | -0.560 |
+| F1 — `watering_soil` | 0.462 | 0.000 | -0.462 |
 
 **What I predicted before I looked:**
-<!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
-     prediction made afterwards isn't one. -->
+
+My trained model will beat the baseline most on `general_care`, since that label is a catch-all ("all other upkeep") that's hard to define in one sentence for a zero-shot model but should be learnable from labeled examples; I expect the smallest gap on `pest_management`, where the baseline already scores well (F1 0.857) because that label's definition is narrow and distinctive.
 
 **What the gap actually means:**
-<!-- If the baseline matched your trained model, your fine-tuning added
-     nothing — and that is a real finding, not a failure. Say it plainly. -->
+
+The prediction was wrong, and not by a little: the trained model lost to the zero-shot baseline on every measure, not just `general_care`. The confusion matrix in `results.json` shows why — the trained model predicted `pest_management` for all 30 held-out posts, regardless of their true label. It didn't learn a weaker version of the task; it learned to output one class and ignore the input. That's why `general_care`, `watering_soil`, and `plant_selection` all show F1 0.000 for the trained model (it never once predicted them), and why its `pest_management` F1 (0.421) is actually worse than the baseline's (0.857) — it's right every time pest_management is the true label (recall 1.0) but wrong the rest of the time (precision 0.267), since it never predicts anything else. Fine-tuning here didn't add nothing — it made things worse than having no model at all. That points to a training problem (likely a dataset/class-balance or optimization issue) to dig into before trusting this model, not a case where the baseline and trained model were simply comparable.
 
 
 

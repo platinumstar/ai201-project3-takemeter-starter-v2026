@@ -1,0 +1,190 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.5333333333333333,
+    "f1_macro": 0.4696703296703297,
+    "per_label": {
+      "general_care": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 8
+      },
+      "pest_management": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 8
+      },
+      "plant_selection": {
+        "precision": 0.3888888888888889,
+        "recall": 1.0,
+        "f1": 0.56,
+        "support": 7
+      },
+      "watering_soil": {
+        "precision": 0.5,
+        "recall": 0.42857142857142855,
+        "f1": 0.4615384615384615,
+        "support": 7
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "\r\nI dry out the plant in the sun for a few hours and it seems to kill them. A real pain",
+      "gold": "pest_management",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "Tradescantia tolerates low light, is very forgiving, props like a champ...",
+      "gold": "plant_selection",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "The pot feels very light and the soil has pulled away from the edges. When I water, the water runs straight out the bottom. What's happening?",
+      "gold": "watering_soil",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "I'm SO DONE with fungus gnats. I'm getting beneficial nematodes but wanted to ask about applying the mixture. Should I get a pack that comes with a sprayer, or would a watering can, or regular sprayer from the dollar store work?",
+      "gold": "pest_management",
+      "predicted": "watering_soil"
+    },
+    {
+      "text": "\r\nI use Jacks Classic, they have a general houseplant one and then more specific mixes for other groups of plants. The general one does all my plants and succulents, and you really have to try to overfeed the plants to cause burn",
+      "gold": "general_care",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "I\u2019m pretty new to this, so I\u2019m really interested in knowing how you quarantine your new plants and how long ? \r\nIs a few meters away enough ? Or different rooms ? \r\nI always treat my new plants with bt and clean the leaves thoroughly.",
+      "gold": "pest_management",
+      "predicted": "pest_management"
+    },
+    {
+      "text": "Can I see pictures of your favorite pet safe house plants? I love stand out plants with variagation and pretty colors etc but I\u2019m open to anything!!\r\n\r\nAs of right now I have a two pothos, peace lily, aloe, bush on fire, and a monstera\u2026none of which are \u201cpet safe\u201d and I\u2019m running out of high up places to store plants where my cat can\u2019t get to them. I would LOVEEEE to have big beautiful plants on end tables or just all over my house, but I\u2019m having a hard time finding pretty pet friendly plants to make as statement pieces around the house. My mamaw always had a green thumb, I inherited her plants after she passed and my new love for plants really helps me feel close to her so I would love for my house to be covered without worrying about my pets\u2026.TIA \ud83d\udc9a I didn\u2019t get any responses in r/plants so I\u2019m hoping I get better results here lol",
+      "gold": "plant_selection",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "Plant jail (the bathroom) for a few weeks until I can be certain there are no health hazards",
+      "gold": "pest_management",
+      "predicted": "pest_management"
+    },
+    {
+      "text": "My poinsettia was doing wonderfully over the winter. I knew of course that it would lose all of its red leaves and I was mentally prepared for that. But now I see that even the green ones have fallen off! All I'm left with now is the stems. And a couple of red leaves which are about to fall off. Is this normal??",
+      "gold": "general_care",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "If you have pets, make sure what you're getting isn't toxic :)",
+      "gold": "plant_selection",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "I'm starting to get bored of all of my plain green houseplants and I'd like to add some color into my collection. What are your favorite vibrant and colorful plants?\r\n\r\nEdit: Oh my goodness thank you all so much for the recommendations! This is awesome :)",
+      "gold": "plant_selection",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "Where in the living room is the best spot for a monstera? Window faces east, the sofa is about 6 feet away.",
+      "gold": "general_care",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "It is time to repot my Codiaeum and I read one article that said to use soil with peat, a different article that said to use a soil *without* peat, and I just don't know who to believe! What do y'all think?\r\n\r\n&#x200B;\r\n\r\nAdditionally, any tips on repotting this plant in general? I've had it for just over a year and it's grown impressively, only just thought to check the bottom to see its little roots poking out- whoops! Want to make sure it continues to thrive",
+      "gold": "watering_soil",
+      "predicted": "watering_soil"
+    },
+    {
+      "text": "I recently got a scindapsus pictus \u2018argyreus\u2019. I\u2019ve read that the care is similar to pothos. I usually water my pothos when it\u2019s completely dry to the bottom of the pot (I measure it with a moisture meter). I water it until water drips out of the drainage holes.\r\n\r\nHowever, my scindapsus showed signs that it needed watering (leaves started curling) before the soil was completely dry. It was dry for the top 50-75% of the soil, but at the bottom, it was slightly moist, but near dry. I watered it, but I was worried that since the soil was still moist at the bottom, I could over water it if I water to the point that it drips out of the bottom. Would it be okay to let water drip out of the bottom in this case? How do you usually water scindapsus pictus?",
+      "gold": "watering_soil",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "Hey all, I recently got into plants and I hear every plant YouTuber talk about perlite and how they use it for every plant they have. Recently I went to a plant store and they didn't have any perlite but had Seramis, which I think is sort of a substitute? They also had bigger sized clay pebbles and recommended those as well but I still don't even know what the difference between all those is.\r\n\r\nDo they all have close to the same effects on plants or is there a big difference? Thanks a lot",
+      "gold": "watering_soil",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "\r\nI\u2019ve tried so many things for these little pests. In the end I used my vacuum cleaner to suck them up one by one as they rested on my walls. Took a bout a week of daily sucking (maybe 5 mins a day) but I\u2019m can finally say I am gnat free. If that\u2019s what they were.",
+      "gold": "pest_management",
+      "predicted": "pest_management"
+    },
+    {
+      "text": "Anyone recommend anything low maintenence with growing potential for a bathroom? Room gets indirect light through one of those windows that's not quite see through due to it being a bathroom. Room can be quite warm as well and humid.",
+      "gold": "plant_selection",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "Bunnings have a product called \"gnat barrier\" it's a fine gravel-type substance that you put on top of the soil, like mulch. Sand does also work. It stops the gnats from being able to reach the soil and lay their eggs.",
+      "gold": "pest_management",
+      "predicted": "pest_management"
+    },
+    {
+      "text": "I've recently aquire a lovely zz plant but after thrip and spider mites made their way into the house earlier this year I'm making sure to keep him quarentined in a bag. The bag though is creating a lot of humidity around the plant and I worry it will keep it too moist. If there are no other plants in the room is it okay to keep it outside the bag? Closest plant is jn the room next door.\r\n\r\nAnd how long does it stay in quarentine?",
+      "gold": "pest_management",
+      "predicted": "pest_management"
+    },
+    {
+      "text": "I recently bought a rattlesnake plant, not really knowing how to care for it. It's not doing well. I looked it up, and it said warm and humid. I live in the northeastern US. How do people, especially those in less humid climates, take care of these plants? \r\n\r\nI am really stressed about this plant and all I want is for it to be healthy again.",
+      "gold": "general_care",
+      "predicted": "watering_soil"
+    },
+    {
+      "text": "Mountable grow lights if needed or fairy lights would look super cute. A strand twisting down each side on the metal curve, could do front and back also to make it brighter, and then weaving some around the pots on the shelves. (Could hide the battery packs behind the pots.) If you do need grow lights you can do those during the day of course and switch fairy lights on at night.",
+      "gold": "general_care",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "I need a plant to have in my room that doesn't require much sunlight. Any amount of water needed is fine. Preferably something not super leafy if that makes sense. Can be big or small! My cactus just died and I need a new study buddy. \r\n\r\nAll suggestions highly appreciated!",
+      "gold": "plant_selection",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "So I have a syngonium pink splash coming in the mail today (!!!). Its my first syngonium, so I've been doing some research on them. I've found that some people describe them as \"water-loving\" and to never let them dry out, while others say they let them get bone dry before watering. So.... what is the truth. This directly correlates into my next question - ceramic vs terracotta pot for her? Terracotta is my go to, but for a \"water loving\" plant I'd steer more towards ceramic (and I happen to have both on hand currently).\r\n\r\nAny tips on general syngonium care or potting up tips is always appreciated as well! :)",
+      "gold": "watering_soil",
+      "predicted": "watering_soil"
+    },
+    {
+      "text": "Hi there! I live in SoCal, pretty warm during the summer, and winter lately have been on and off when it comes to weather. It would go from 89 and sometimes goes down to 60. \r\n\r\nI\u2019ve never used a humidifier for my houseplants before, and wanted to ask for help and opinion! \r\n\r\n-how often should I turn the humidifier on everyday? 365 days of the year from morning to noon? \r\n-about what humidity percentage should it stay at? I have a humidity gauge",
+      "gold": "general_care",
+      "predicted": "watering_soil"
+    },
+    {
+      "text": "\r\nI love your arched plant stand. If you have a handy husband like mine, get him to put a cornice above the window blinds and hide a long tube plant light inside. My guy did this kind of installation above our fireplace. My plants are on the hearth.",
+      "gold": "general_care",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "I\u2019m wondering if there\u2019s a way to see spider mites on plants before it\u2019s too late? I have over 130 house plants so I can\u2019t treat them all but I periodically find them around\u2026 anyone tried this or something else successfully?",
+      "gold": "pest_management",
+      "predicted": "pest_management"
+    },
+    {
+      "text": "Hi guys, I want to repot two of my plants (a calathea & a philodendron) and was wondering if the good dirt potting mix is ideal for those plants? Or if its a good potting mix in general? I\u2019ve never repotted my plants before so any advice would be helpful. Thanks! :)",
+      "gold": "watering_soil",
+      "predicted": "watering_soil"
+    },
+    {
+      "text": "So I ordered 6 tiny fairy garden plants from Amazon. I got a couple of begonias, an aluminum plant, some tiny ferns, things like that. They nearly died because I didn't know what I was doing, but the website told me to place them on a dish and put a little water to water them from the bottom up. Once I started doing this daily, they came back.\r\n\r\nI want to keep them in tiny pots and hang them from DIY plant hangers. I have found some tiny pots with little dishes underneath that seem like they would help get the job done. I would obviously need to bring the plants inside when the temperature drops, but it's getting warmer where I live.\r\n\r\nDo you guys think that will be ok? If this isn't sustainable, I'll keep these on the windowsill and get some succulents instead, which I hear are a bit more resilient.",
+      "gold": "watering_soil",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "I've been wanting to buy some plants for my bedroom to help with the air purifying instead of relying heavily on air purifying machine. Some of the plants I've been thinking of was snake plant, English ivy, and a palm plant (I haven't chosen a specific one), i have also thought about peace Lily too. But I want to know what are your guys suggestion. \r\nI own a cat and guinea pigs that stinks up, thus I've been looking for some plants to help with the smell/air purifying naturally. I do understand that snake plant and peace Lily are toxic to cats, but he haven't nibbled at one of my snake plants nor have he have nibbled at the peace Lily of my boyfriend's mom",
+      "gold": "plant_selection",
+      "predicted": "plant_selection"
+    },
+    {
+      "text": "I do a walkthrough weekly to check which ones need water.",
+      "gold": "general_care",
+      "predicted": "plant_selection"
+    }
+  ]
+}
