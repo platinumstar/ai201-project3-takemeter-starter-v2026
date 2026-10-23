@@ -228,11 +228,13 @@ The prediction was wrong, and not by a little: the trained model lost to the zer
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.70, all seeds | 0.267 | 0.433 | 0.333 | MISSED |
+| 2. Every label F1 | ≥ 0.55, all seeds | lowest 0.000 (3 labels at 0.000) | lowest 0.000 (`plant_selection`, `watering_soil`) | lowest 0.000 (`plant_selection`) | MISSED |
+| 3. Balance | no label > 28% | largest 27.5% | 27.5% | 27.5% | MET |
+| 4. Seed spread | max − min accuracy ≤ 0.10 | 0.267 | 0.433 | 0.333 | MISSED (spread 0.167) |
+| 5. Confidence | top third ≥ bottom third + 0.10 | 0.30 vs 0.30 (+0.00) | 0.50 vs 0.30 (+0.20) | 0.60 vs 0.10 (+0.50) | MISSED (seed 42) |
+
+Criterion 3 does not depend on the seed, because it is measured on the whole dataset.
 
 ### Confusion matrix
 
