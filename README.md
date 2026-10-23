@@ -238,17 +238,20 @@ The prediction was wrong, and not by a little: the trained model lost to the zer
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
+Seed 42 (accuracy 0.267, test split of 30 posts):
 
-| true \ predicted |  |  |  |
-|---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| true \ predicted | plant_selection | general_care | watering_soil | pest_management |
+|---|---|---|---|---|
+| **plant_selection** | 0 | 0 | 0 | 7 |
+| **general_care** | 0 | 0 | 0 | 8 |
+| **watering_soil** | 0 | 0 | 0 | 7 |
+| **pest_management** | 0 | 0 | 0 | 8 |
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
+The biggest off-diagonal number is 8: eight real `general_care` posts were called `pest_management`, and none went the other way. But the whole matrix is a single column. The model called every test post `pest_management`, so this is a collapse to one label rather than a boundary between two labels. It scored 8 of 30 only because `pest_management` had 8 test posts. Seed 7 did not collapse completely, but it never predicted `plant_selection` or `watering_soil` either, and its biggest error was 5 real `plant_selection` posts called `general_care`.
 
 
 
