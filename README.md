@@ -190,7 +190,7 @@ My community is houseplant owners: the advice threads and questions where people
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
-     Don't fill these in during unit 5.
+     Don't fill these in during unit 5. 
      ═══════════════════════════════════════════════════════════════════ -->
 
 ---
