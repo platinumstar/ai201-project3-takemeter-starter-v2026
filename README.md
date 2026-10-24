@@ -295,49 +295,121 @@ The biggest off-diagonal number is 8: eight real `general_care` posts were calle
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
-
-<!-- Nobody grades this number. A 60% who argues every disagreement from the
-     stated rules beats a 95% who wrote "staff was right" nine times. Several
-     of the 30 were chosen because they're genuinely ambiguous — you should be
-     winning some of these. -->
+**Agreement rate:** 18 / 30 = 60%
 
 **Disagreements**
 
-<!-- Three lines each: the post, both labels, and who you think is right and
-     why — grounded in the staff definitions you were both applying.
-
-     Then sort each into one of three piles:
-       (a) the rule covered it and I applied it loosely → a consistency problem
-       (b) the rule genuinely doesn't say               → a gap in the definitions
-       (c) the rule is ambiguous here and my reading is defensible → argue it.
-           This is a legitimate win.
-
-     Pile (a) is the one that matters most for your diagnosis: if you applied a
-     written rule two different ways on 30 posts, that is direct evidence about
-     what you did across your own 200. -->
-
 **1.**
-> *The post:*
+> *The post:* Pulled the splits from the last five editions. The winning time has moved by 40 seconds total in ten years, but the 100th-place time is four minutes faster. The depth changed, the front didn't.
 >
-> *Staff said / I said:*
+> *Staff said / I said:* `analysis` / `hot_take`
 >
-> *My call, and why:*
+> *My call, and why:* Rule 1 asks whether the fact carries the argument. Here it does: the 40-second move at the front against the 4-minute move at 100th place is the whole point, and the conclusion ("the depth changed, the front didn't") follows from it. Staff is right. The rule covered this and I applied it loosely.
 >
-> *Which pile:*
+> *Which pile:* (a)
 
 **2.**
-> *The post:*
+> *The post:* I tracked sleep against session quality for eleven weeks. Under seven hours the next day's intervals were 6-8 seconds per mile slower, every time bar one. Small sample, one runner, but it's consistent enough that I've stopped scheduling hard days after late shifts.
 >
-> *Staff said / I said:*
+> *Staff said / I said:* `analysis` / `hot_take`
 >
-> *My call, and why:*
+> *My call, and why:* Rule 1 says a fact has to be checkable and load-bearing, but it doesn't say whether the writer's own eleven weeks of tracking counts as checkable. The post even admits "small sample, one runner". The number does carry the conclusion, so I can see why staff said `analysis`, but the rule is silent on personal data, so this is a gap in the definitions.
 >
-> *Which pile:*
+> *Which pile:* (b)
+
+**3.**
+> *The post:* The club championship scoring changed in 2019 from top-6 to top-10. Since then our B team has finished above the A team twice. That's not depth improving, it's the scoring rewarding turnout.
+>
+> *Staff said / I said:* `analysis` / `hot_take`
+>
+> *My call, and why:* The date (2019), the scoring change and the two B-over-A finishes are what the conclusion rests on, and "it's the scoring rewarding turnout" is argued from them. That is exactly what rule 1 calls `analysis`. Staff is right, and I applied the rule loosely.
+>
+> *Which pile:* (a)
+
+**4.**
+> *The post:* Everyone blames the hill at 18 miles. I split the field into people who ran the first half under 1:45 and over, and the slowdown after 18 was almost identical for both groups. If the hill were the problem the fast starters would fall apart harder.
+>
+> *Staff said / I said:* `analysis` / `hot_take`
+>
+> *My call, and why:* The split at 1:45 and the matching slowdown in both groups is the argument itself, and the last sentence says why it counts against the hill. The fact is load-bearing under rule 1. Staff is right. I applied the rule loosely.
+>
+> *Which pile:* (a)
+
+**5.**
+> *The post:* Carbon plates aren't the whole story. My times dropped 2% in the shoes and another 2% the following year in the same pair, when the only thing that changed was going from 35 to 50 miles a week.
+>
+> *Staff said / I said:* `analysis` / `hot_take`
+>
+> *My call, and why:* The post opens with its conclusion ("Carbon plates aren't the whole story"), then offers my-own-numbers evidence for it (2%, 2%, 35 to 50 miles a week). I read the opening claim as the point and the numbers as support for a conclusion already reached, which is the rule 1 `hot_take` case. But the numbers are specific and checkable, and the mileage change does real work, so staff's reading is also defensible. Rule 1 doesn't settle which part leads.
+>
+> *Which pile:* (c)
+
+**6.**
+> *The post:* Checked the entry lists. 41% of this year's field have never run the distance before, against 26% five years ago. That's why the finish-line photos look different, not because standards dropped.
+>
+> *Staff said / I said:* `analysis` / `hot_take`
+>
+> *My call, and why:* 41% against 26% of the field is the reason given for the conclusion, and the post says so ("That's why..."). Rule 1 makes this `analysis`. Staff is right. I applied the rule loosely.
+>
+> *Which pile:* (a)
+
+**7.**
+> *The post:* Ran the same loop in 4C and in 24C within a fortnight, same effort by heart rate. 90 seconds slower in the heat over six miles. People keep saying heat costs you 'a bit' and it's more than that.
+>
+> *Staff said / I said:* `analysis` / `hot_take`
+>
+> *My call, and why:* The conclusion ("it's more than that") is a claim against something people say, and I read the measurements as support for it. But 4C against 24C at the same heart-rate effort, 90 seconds over six miles, is specific and checkable and is why the claim holds. Rule 1 doesn't say how to treat a post whose conclusion is aimed at a general belief. Staff's `analysis` is reasonable and so is my `hot_take`.
+>
+> *Which pile:* (c)
+
+**8.**
+> *The post:* The 10K route was remeasured in 2021 and came out 60 metres long. Everyone comparing PBs from before and after that is comparing two different races, which is about 12 seconds at club pace.
+>
+> *Staff said / I said:* `analysis` / `reaction`
+>
+> *My call, and why:* I labelled this `reaction`, and rule 2 says `reaction` is about what just happened to the writer and how it felt. This post is about a measured course (2021, 60 metres, 12 seconds), so there is no feeling in it. Rule 3 also says immediacy never outranks evidence. Staff is right, and this was a mistake in how I applied the rule.
+>
+> *Which pile:* (a)
+
+**9.**
+> *The post:* Three of us ran the same session on the same day, different shoes, within 10 seconds of each other over 5 miles. I'm not saying shoes do nothing, but whatever they do was smaller than the noise between three people.
+>
+> *Staff said / I said:* `analysis` / `reaction`
+>
+> *My call, and why:* I labelled this `reaction`, but the post reports no feeling or just-happened event. It compares times from the same session and draws a conclusion from them, which rule 3 says is `analysis` regardless of when it was written. The hedge ("I'm not saying shoes do nothing") is why `hot_take` would be the arguable version, but `reaction` was wrong. Staff is right on the label, and I applied rule 2 loosely.
+>
+> *Which pile:* (a)
+
+**10.**
+> *The post:* The club needs to stop pretending the Tuesday session is for everyone. It isn't and it never has been.
+>
+> *Staff said / I said:* `hot_take` / `reaction`
+>
+> *My call, and why:* Rule 2 says a `hot_take` asserts something general about the world. "The club needs to stop pretending" is a general claim about the club. Being annoyed doesn't make it a `reaction`, and rule 2 says a post can be heated and still be a `hot_take`. Staff is right. The rule covered this and I applied it loosely.
+>
+> *Which pile:* (a)
+
+**11.**
+> *The post:* Marathon training plans are all the same plan with different fonts.
+>
+> *Staff said / I said:* `hot_take` / `reaction`
+>
+> *My call, and why:* "Marathon training plans are all the same plan with different fonts" is a general claim about the world, with no mention of what happened to the writer. Rule 2 makes it a `hot_take`. Staff is right, and I applied the rule loosely.
+>
+> *Which pile:* (a)
+
+**12.**
+> *The post:* Just realised the shoes I set every PB in this year are the ones I bought by accident in the wrong size.
+>
+> *Staff said / I said:* `reaction` / `hot_take`
+>
+> *My call, and why:* Rule 2 says a `reaction` reports what just happened to the writer, and "Just realised..." is a personal discovery about the writer's own shoes. I read it as a point about shoes in general, but the post makes no general claim. Staff is right. I applied rule 2 loosely.
+>
+> *Which pile:* (a)
 
 **What the pattern in my disagreements tells me:**
 
-
+Nine of my twelve disagreements are posts staff called `analysis` that I labelled `hot_take` (seven) or `reaction` (two). I kept treating first-person measurements and comparisons ("I tracked", "I split", "I ran") as opinion, even when the number was the reason for the conclusion. That is rule 1, and I applied it loosely. Of the 12, I put 9 in pile (a), 1 in pile (b) and 2 in pile (c). Four of my `reaction` labels were loose applications of rule 2: I used `reaction` for general claims (the Tuesday session, training plans) and for two measured comparisons, and I used `hot_take` for a personal realisation. Pile (a) is the large one, so I applied written rules inconsistently on 30 posts, which is evidence about how I applied my own rules on the 200.
 
 ---
 
