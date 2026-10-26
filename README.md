@@ -429,39 +429,58 @@ Nine of my twelve disagreements are posts staff called `analysis` that I labelle
 ## The Improvement
 
 **What I changed:**
+One training setting: `EPOCHS` from 3 to 10. Nothing else changed. Learning rate (2e-5), batch size (16), `MAX_LENGTH` (128), the base model (`distilbert-base-uncased`), the 200 labels and the three seeds (42, 7, 2024) are the same as in the before run. Both runs were on Apple Silicon (`mps`, torch 2.14.1). I ran the three seeds with `RUN_LABEL = "after"`, so the result is in `results_three_seeds_after.json` and the before file is untouched.
 
 **Which diagnosis pointed at it:**
+My diagnosis for criteria 1 and 2 was undertraining: about 139 training posts at batch size 16 is 9 steps an epoch, so 3 epochs was about 27 steps, and the before run collapsed to one label with loss stuck near 1.38 (chance for four labels). 10 epochs is about 90 steps. I picked this over relabelling because the collapse is not something a relabel can explain. A model that outputs one label for every post has not learned any boundary, mine or anyone else's.
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.70, all seeds | 0.700 | 0.767 | 0.667 | MISSED (seed 2024) |
+| 2. Every label F1 | ≥ 0.55, all seeds | lowest 0.600 (`watering_soil`) | lowest 0.667 (`plant_selection`, `general_care`) | lowest 0.500 (`general_care`) | MISSED (seed 2024) |
+| 3. Balance | no label > 28% | largest 27.5% | 27.5% | 27.5% | MET |
+| 4. Seed spread | max − min accuracy ≤ 0.10 | 0.700 | 0.767 | 0.667 | MET (spread 0.100, exactly on the line) |
+| 5. Confidence | top third ≥ bottom third + 0.10 | 0.80 vs 0.50 (+0.30) | 1.00 vs 0.50 (+0.50) | 0.90 vs 0.50 (+0.40) | MET |
+
+Before and after side by side:
+
+| Criterion | Before | After |
+|---|---|---|
+| 1. Overall accuracy | 0.267 / 0.433 / 0.333, MISSED | 0.700 / 0.767 / 0.667, MISSED (by one post in seed 2024) |
+| 2. Every label F1 | lowest 0.000 in all seeds, MISSED | lowest 0.600 / 0.667 / 0.500, MISSED (seed 2024: `general_care` 0.500 and `watering_soil` 0.545) |
+| 3. Balance | MET | MET (unchanged, the data did not change) |
+| 4. Seed spread | 0.167, MISSED | 0.100, MET (exactly at the limit) |
+| 5. Confidence | MISSED (seed 42, +0.00) | MET (+0.30 / +0.50 / +0.40) |
+
+Seed 2024 confusion matrix (accuracy 0.667, test split of 30 posts), the seed that missed criteria 1 and 2:
+
+| true \ predicted | plant_selection | general_care | watering_soil | pest_management |
+|---|---|---|---|---|
+| **plant_selection** | 4 | 3 | 0 | 0 |
+| **general_care** | 0 | 5 | 1 | 2 |
+| **watering_soil** | 0 | 4 | 3 | 0 |
+| **pest_management** | 0 | 0 | 0 | 8 |
 
 **Did it help, and how do I know:**
 
-<!-- If it didn't, say so. Relabelling that didn't help is a genuinely
-     interesting result and earns full credit. -->
+Yes, a lot: accuracy went from 0.267 / 0.433 / 0.333 to 0.700 / 0.767 / 0.667, and no seed predicts a single label for every post any more. Two more criteria are now met (4 and 5, so 3 of 5 in total), and the other two moved from far away to within a post or two of their targets. The training logs show why: before, loss stayed near 1.34, and now it falls from about 1.36 to 0.91-1.05 over the 10 epochs and validation accuracy climbs from about 0.3 to 0.67-0.77. That confirms my diagnosis that criteria 1 and 2 were mostly an undertraining problem and not a labelling one.
 
-
+It did not fix everything. Criterion 1 is missed by one post in seed 2024 (20 of 30 correct, and 21 would be 0.700). Criterion 4 passes only because 0.767 − 0.667 is exactly 0.100, which is three posts out of 30. I made one change and ran it on one set of splits per seed, so I cannot say how much of the gap between 0.667 and 0.700 is the model and how much is which 30 posts landed in the test split.
 
 ---
 
 ## What's Still Broken
 
-<!-- For each criterion still missed: what you'd do, and why you stopped. -->
+**Criterion 1 (accuracy ≥ 0.70, all seeds):** still missed, in seed 2024 (0.667). I would first try more epochs, because validation loss was still falling at epoch 10 (seed 2024 went 0.95, 0.93, 0.91 over the last three epochs) and I have not found where it stops improving. I stopped because Milestone 5 asks for one change, and this is the next one.
 
+**Criterion 2 (every label F1 ≥ 0.55, all seeds):** still missed, in seed 2024, where `general_care` is 0.500 and `watering_soil` is 0.545. The matrix above shows the pair: 4 of 7 real `watering_soil` posts were called `general_care` and none went the other way. In seeds 7 and 2024, 3 of 7 real `plant_selection` posts were called `general_care` too. So `general_care` is absorbing posts from both neighbours, which fits it being my catch-all label ("all other upkeep") and the one where my water-versus-light-and-routine rule is hardest to apply the same way every time. My agreement report found I apply written rules loosely (9 of 12 disagreements), so I would re-read the `general_care`, `watering_soil` and `plant_selection` posts against my own rules and count how many rows change before retraining. I have not done that, so I cannot say yet whether this is a labelling problem or a hard label pair. Another plausible cause is the 7 test posts per label, where one post moves F1 by 0.07 to 0.10.
 
+**Criterion 4 (seed spread ≤ 0.10):** met, but with no margin. The spread is exactly 0.100, so one post in a different seed would fail it. I would not call this solid.
 
-**The gap between what I meant my labels to capture and what the model
-learned:**
-<!-- Two sentences. Your confusion matrix is the evidence. -->
-
-
+**The gap between what I meant my labels to capture and what the model learned:**
+I meant `general_care` to be everything left over, but the model treats it as the default answer: in seed 2024 it takes 3 of 7 `plant_selection` posts and 4 of 7 `watering_soil` posts, and almost nothing is mistaken for it in the other direction. My other labels have clearer cues (pest names, plant names) than the catch-all does, so the model seems to have learned the cues and fallen back on `general_care` when it saw none.
 
 <!-- ═════════════════════════════════════════════════════════════════════
 

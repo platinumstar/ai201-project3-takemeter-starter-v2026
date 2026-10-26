@@ -1,0 +1,209 @@
+[
+  {
+    "seed": 42,
+    "n_test": 30,
+    "accuracy": 0.7,
+    "f1_macro": 0.6955357142857143,
+    "per_label": {
+      "plant_selection": {
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "f1": 0.8571428571428571,
+        "support": 7
+      },
+      "general_care": {
+        "precision": 0.5833333333333334,
+        "recall": 0.875,
+        "f1": 0.7,
+        "support": 8
+      },
+      "watering_soil": {
+        "precision": 1.0,
+        "recall": 0.42857142857142855,
+        "f1": 0.6,
+        "support": 7
+      },
+      "pest_management": {
+        "precision": 0.625,
+        "recall": 0.625,
+        "f1": 0.625,
+        "support": 8
+      }
+    },
+    "confusion": {
+      "plant_selection": {
+        "plant_selection": 6,
+        "general_care": 0,
+        "watering_soil": 0,
+        "pest_management": 1
+      },
+      "general_care": {
+        "plant_selection": 1,
+        "general_care": 7,
+        "watering_soil": 0,
+        "pest_management": 0
+      },
+      "watering_soil": {
+        "plant_selection": 0,
+        "general_care": 2,
+        "watering_soil": 3,
+        "pest_management": 2
+      },
+      "pest_management": {
+        "plant_selection": 0,
+        "general_care": 3,
+        "watering_soil": 0,
+        "pest_management": 5
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.4270867705345154,
+      "mean_when_wrong": 0.369011789560318,
+      "accuracy_most_confident_third": 0.8,
+      "accuracy_least_confident_third": 0.5,
+      "n_per_third": 10
+    },
+    "device": "mps",
+    "device_name": "Apple Silicon GPU (MPS)",
+    "torch_version": "2.14.1",
+    "max_length": 128
+  },
+  {
+    "seed": 7,
+    "n_test": 30,
+    "accuracy": 0.7666666666666667,
+    "f1_macro": 0.7638888888888888,
+    "per_label": {
+      "plant_selection": {
+        "precision": 0.8,
+        "recall": 0.5714285714285714,
+        "f1": 0.6666666666666666,
+        "support": 7
+      },
+      "general_care": {
+        "precision": 0.6,
+        "recall": 0.75,
+        "f1": 0.6666666666666666,
+        "support": 8
+      },
+      "watering_soil": {
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "f1": 0.8333333333333334,
+        "support": 7
+      },
+      "pest_management": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 8
+      }
+    },
+    "confusion": {
+      "plant_selection": {
+        "plant_selection": 4,
+        "general_care": 3,
+        "watering_soil": 0,
+        "pest_management": 0
+      },
+      "general_care": {
+        "plant_selection": 1,
+        "general_care": 6,
+        "watering_soil": 0,
+        "pest_management": 1
+      },
+      "watering_soil": {
+        "plant_selection": 0,
+        "general_care": 1,
+        "watering_soil": 5,
+        "pest_management": 1
+      },
+      "pest_management": {
+        "plant_selection": 0,
+        "general_care": 0,
+        "watering_soil": 0,
+        "pest_management": 8
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.42390334606170654,
+      "mean_when_wrong": 0.33423012495040894,
+      "accuracy_most_confident_third": 1.0,
+      "accuracy_least_confident_third": 0.5,
+      "n_per_third": 10
+    },
+    "device": "mps",
+    "device_name": "Apple Silicon GPU (MPS)",
+    "torch_version": "2.14.1",
+    "max_length": 128
+  },
+  {
+    "seed": 2024,
+    "n_test": 30,
+    "accuracy": 0.6666666666666666,
+    "f1_macro": 0.6654040404040404,
+    "per_label": {
+      "plant_selection": {
+        "precision": 1.0,
+        "recall": 0.5714285714285714,
+        "f1": 0.7272727272727273,
+        "support": 7
+      },
+      "general_care": {
+        "precision": 0.4166666666666667,
+        "recall": 0.625,
+        "f1": 0.5,
+        "support": 8
+      },
+      "watering_soil": {
+        "precision": 0.75,
+        "recall": 0.42857142857142855,
+        "f1": 0.5454545454545454,
+        "support": 7
+      },
+      "pest_management": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 8
+      }
+    },
+    "confusion": {
+      "plant_selection": {
+        "plant_selection": 4,
+        "general_care": 3,
+        "watering_soil": 0,
+        "pest_management": 0
+      },
+      "general_care": {
+        "plant_selection": 0,
+        "general_care": 5,
+        "watering_soil": 1,
+        "pest_management": 2
+      },
+      "watering_soil": {
+        "plant_selection": 0,
+        "general_care": 4,
+        "watering_soil": 3,
+        "pest_management": 0
+      },
+      "pest_management": {
+        "plant_selection": 0,
+        "general_care": 0,
+        "watering_soil": 0,
+        "pest_management": 8
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.4733673930168152,
+      "mean_when_wrong": 0.3729436993598938,
+      "accuracy_most_confident_third": 0.9,
+      "accuracy_least_confident_third": 0.5,
+      "n_per_third": 10
+    },
+    "device": "mps",
+    "device_name": "Apple Silicon GPU (MPS)",
+    "torch_version": "2.14.1",
+    "max_length": 128
+  }
+]
