@@ -266,13 +266,26 @@ The biggest off-diagonal number is 8: eight real `general_care` posts were calle
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall accuracy | ≥ 0.70, all seeds | MISSED | 0.267, 0.433, 0.333. The best seed (0.433) is 0.267 short of the target and the worst (0.267) is 0.433 short. |
+| 2 | Every label F1 | ≥ 0.55, all seeds | MISSED | Every seed has at least one label at F1 0.000. `plant_selection` is 0.000 in all three seeds. |
+| 3 | Balance | no label > 28% | MET | Largest label is `pest_management` at 27.5%. This is measured on the 200 rows, so it holds in every seed. |
+| 4 | Seed spread | max − min accuracy ≤ 0.10 | MISSED | 0.433 − 0.267 = 0.167. |
+| 5 | Confidence | top third ≥ bottom third + 0.10 | MISSED | Seed 42 is 0.30 vs 0.30 (+0.00). Seeds 7 (+0.20) and 2024 (+0.50) pass, but the target has to hold in all three. |
 
 **Diagnoses**
+
+**Criteria 1 and 2 (accuracy, per-label F1): mostly a model problem, with a possible labelling problem underneath.**
+The confusion matrix for seed 42 is a single column: all 30 test posts were called `pest_management`. A model that ignores its input and outputs one label is not showing me a boundary I labelled badly. It is a model that has not learned anything yet. The training log agrees: loss only went from about 1.38 to 1.34, and 1.386 is ln(4), which is what a four-way coin flip scores. With 200 posts, about 140 of them in training, batch size 16 and 3 epochs, the model takes roughly 27 gradient steps at a learning rate of 2e-5. That is very little training for a model that starts with a randomly initialised classification head. I think this is the main cause, but I have not tested it yet.
+
+The agreement report is what stops me from blaming the model for everything. I agreed with staff on only 18 of 30 posts (60%), and 9 of my 12 disagreements were pile (a): the written rule gave a clear answer and I applied it loosely. That shows I do not apply written rules consistently when I am labelling. The caveat is that those 30 posts were labelled under the staff taxonomy (`analysis`, `hot_take`, `reaction`), not my plant taxonomy, so the report measures my habits, not the 200 plant labels directly. It does not tell me how many of my 200 labels are wrong. It does tell me I should expect some, most likely at the `watering_soil` / `general_care` boundary, where I wrote a decision rule and where my 0.55 F1 target depends on the rule being applied the same way each time.
+
+`plant_selection` at 0.000 F1 in all three seeds is the one result I cannot put on a collapse. In seed 7 it was never predicted, and its biggest error was 5 real `plant_selection` posts called `general_care`. Some of my `plant_selection` posts are short plant recommendations ("ZZ plant is also easy.") that mention ease of care, which is also what `general_care` is about. That is a genuinely hard label pair, and it may be a labelling-consistency problem as well. I would need to re-read those posts to know.
+
+**Criterion 4 (seed spread): a consequence of the same weak model.**
+A 0.167 spread comes from a model that is barely above chance, so which labels it happens to favour changes with the split. Test sets of 30 posts also make each post worth 0.033 accuracy, so a spread of 0.10 is only three posts. I do not expect this to reach 0.10 until the model is learning something stable.
+
+**Criterion 5 (confidence): a model problem, seen in one seed.**
+In seed 42 the model gave the same label to every post, so its confidence told me nothing about which predictions were right (0.30 vs 0.30). That is the collapse again. Seeds 7 and 2024 passed, so confidence is informative when the model has learned something. This is a miss that should go away if the training problem is fixed, and I will check that in the after run.
 
 <!-- For each miss: the cause, and how you know. The four common causes are:
      too few examples for a label, a boundary you applied inconsistently, a
