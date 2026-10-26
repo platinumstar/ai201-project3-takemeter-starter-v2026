@@ -243,6 +243,8 @@ The prediction was wrong, and not by a little: the trained model lost to the zer
 
 Criterion 3 does not depend on the seed, because it is measured on the whole dataset.
 
+**Device:** all three seeds were run on Apple Silicon GPU (`mps`), torch 2.14.1, 3 epochs, learning rate 2e-5, batch size 16. `results_three_seeds_before.json` records the device for each seed.
+
 ### Confusion matrix
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
